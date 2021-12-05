@@ -25,7 +25,7 @@
             }
             echo "<details>
                     <summary>$teacher_name Performance</summary>
-                    <p> Your program_average is: $program_average. This result is $result_level.</p>
+                    <p> Your program average for $program_name is: $program_average. This result is $result_level.</p>
                 </details>
                 <details>
                     <summary>Cumulative Teacher average</summary>

@@ -25,7 +25,7 @@
             }
             echo "<details>
                     <summary>$student_name Performance</summary>
-                    <p>Your gpa is $gpa: This result is $result_level.</p>
+                    <p>Your gpa for $program_name is $gpa: This result is $result_level.</p>
                 </details>
                 <details>
                     <summary>Cumulative Student average</summary>
