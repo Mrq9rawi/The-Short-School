@@ -12,6 +12,7 @@
     <body>
         <?php
             require "database.php";
+            require "formtodatabase.php";
             $teacher_id = $_POST['teacher_id'];
             $teacher_name = $_POST['teacher_name'];
             $program_id = $_POST['program_id'];
