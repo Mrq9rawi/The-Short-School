@@ -18,6 +18,7 @@
             $program_id = $_POST['program_id'];
             $program_name = $_POST['program_name'];
             $gpa = $_POST['gpa'];
+            $table = $student_table;
             if ($gpa < 3.0) {
                 $result_level = "bad. You need to apply yourself and improve";
             }

@@ -18,6 +18,7 @@
             $program_id = $_POST['program_id'];
             $program_name = $_POST['program_name'];
             $program_average = $_POST['program_average'];
+            $table = $teacher_table;
             if ($gpa < 3.0) {
                 $result_level = "bad. You need to attend a corrective performace clinic";
             }
