@@ -11,18 +11,29 @@
     </head>
     <body>
         <?php
-            
-
-        echo "<details>
-                <summary>$student_name Performance</summary>
-            </details>
-            <details>
-                <summary>Cumulative Teacher average</summary>
-                <table>
-                    <thead>$student_table</thead>
-                    <tbody></tbody>
-                </table>
-            </details>"
+            require "database.php";
+            $teacher_id = $_POST['teacher_id'];
+            $teacher_name = $_POST['teacher_name'];
+            $program_id = $_POST['program_id'];
+            $program_name = $_POST['program_name'];
+            $gpa = $_POST['gpa'];
+            if ($gpa < 3.0) {
+                $result_level = "bad. You need to apply yourself and improve";
+            }
+            else {
+                $result_level = "good. Keep up the good work";
+            }
+            echo "<details>
+                    <summary>$student_name Performance</summary>
+                    <p>Your gpa is $gpa: This result is $result_level.</p>
+                </details>
+                <details>
+                    <summary>Cumulative Student average</summary>
+                    <table>
+                        <thead>$student_table</thead>
+                        <tbody></tbody>
+                    </table>
+                </details>"
         ?>
     </body>
 </html>
