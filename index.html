@@ -20,24 +20,24 @@
 			<button id="teacherButton">I'm a Teacher!!</button>
 		</div>
 		<div class="forms">
-			<form action="" method="post" id="studentForm">
+			<form action="student.php" method="post" id="studentForm">
 				<h3>Please Enter Your Information</h3>
-				<p>Any Felid Followed by * Is Required</p>
-				<input type="text" placeholder="Studnet Id*" id="" required>
-				<input type="text" placeholder="Studnet Name*" id="" required>
-				<input type="text" placeholder="Program Id*" id="" required>
-				<input type="text" placeholder="Program Name*" id="" required>
-				<input type="text" placeholder="GPA*" id="" required>
+				<p>Any Field Followed by * Is Required</p>
+				<input type="number" placeholder="Student Id*" id="student_id" name="student_id" required>
+				<input type="text" placeholder="Student Name*" id="student_name" name="student_name" required>
+				<input type="number" placeholder="Program Id*" id="program_id" name="program_id" required>
+				<input type="text" placeholder="Program Name*" id="program_name" name="program_name" required>
+				<input type="text" pattern="\d{1}.\d{1}" placeholder="GPA*" id="gpa" name="gpa" required>
 				<input type="submit" value="Submit">
 			</form>
-			<form action="" method="post" id="teacherForm">
+			<form action="teacher.php" method="post" id="teacherForm">
 				<h3>Please Enter Your Information</h3>
-				<p>Any Felid Followed by * Is Required</p>
-				<input type="text" placeholder="Teacher Id*" id="" required>
-				<input type="text" placeholder="Teacher Name*" id="" required>
-				<input type="text" placeholder="Program Id*" id="" required>
-				<input type="text" placeholder="Program Name*" id="" required>
-				<input type="text" placeholder="Program Average*" id="" required>
+				<p>Any Field Followed by * Is Required</p>
+				<input type="number" placeholder="Teacher Id*" id="teacher_id" name="teacher_id" required>
+				<input type="text" placeholder="Teacher Name*" id="teacher_name" name="teacher_name" required>
+				<input type="number" pattern="\d{7}" placeholder="Program Id*" id="program_id" name="program_id" required>
+				<input type="text" placeholder="Program Name*" id="program_name" name="program_name" required>
+				<input type="text" pattern="\d{1}.\d{1}" placeholder="Program Average*" id="program_average" name="program_average" required>
 				<input type="submit" value="Submit">
 			</form>
 		</div>
