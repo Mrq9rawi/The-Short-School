@@ -82,13 +82,13 @@ body {
 	margin-top: 30px;
 }
 
-.forms #studentForm {
+/* .forms #studentForm {
 	display: none;
 }
 
 .forms #teacherForm {
 	display: none;
-}
+} */
 
 .forms form input:not([type="submit"]) {
 	width: 275px;
