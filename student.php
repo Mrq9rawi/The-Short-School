@@ -37,7 +37,7 @@
             }
 
             //Query for current GPA average for the program
-            $q = "SELECT AVG(gpa) FROM students AS avg WHERE program_id = 'PROG5000'";
+            $q = "SELECT AVG(gpa) FROM students AS avg WHERE program_id = '$program_id'";
                 $r = @mysqli_query($dbc, $q);
                 $row = mysqli_fetch_assoc($r);
                 $program_gpa = $row['AVG(gpa)'];
