@@ -1,20 +1,21 @@
 "use strict";
 
 $(()=>{
-    $pattern_check = /[0-9]/;
-    $first_name = $("#student_fname").val();
-    $last_name = $("#student_lname").val();
+    const $pattern_check = /[0-9]/;
+    var $first_name = $("#student_fname").val().trim();
+    var $last_name = $("#student_lname").val().trim();
     $("#submit").click(e => {
         let isValid = true;
-        if ($first_name.match($pattern_check)) {
+        if ($pattern_check.test($first_name)) {
             isValid = false;
             alert("First Name must have no numbers");
         }
-        else if ($last_name.match($pattern_check)) {
+        else if ($pattern_check.test($last_name)) {
             isValid = false;
             alert("Last Name must have no numbers");
         }
         else {
+            isValid = true;
             return true;
         }
         if (isValid == false) {
