@@ -6,7 +6,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 16, 2021 at 12:16 AM
+-- Generation Time: Dec 16, 2021 at 04:49 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -70,10 +70,15 @@ CREATE TABLE `courses` (
 --
 
 INSERT INTO `courses` (`course_id`, `course_name`, `campus_id`, `program_id`, `faculty_id`, `session_time`) VALUES
+('FTNS4000', 'Fitness (Important)', 150, 'PROG5100', 1724930, 'Friday, 11:00'),
+('GRPH1500', 'Web Graphic Design', 130, 'PROG5100', 1548954, 'Wednesday, 8:00'),
 ('MGMT6000', 'Project Management', 0, 'PROG5000', 1923850, 'Monday, 7:00'),
 ('PROG1000', 'HTML', 120, 'PROG5000', 1748302, 'Tuesday, 7:00'),
 ('PROG1100', 'CSS', 120, 'PROG5000', 1724930, 'Wednesday, 7:00'),
 ('PROG1200', 'Web Design', 120, 'PROG5000', 1784395, 'Thursday, 7:00'),
+('PROG2000', 'PHP', 100, 'PROG5100', 1432654, 'Monday, 8:00'),
+('PROG2100', 'Database Design ', 150, 'PROG5100', 1854729, 'Tuesday, 8:00'),
+('PROG3000', 'RUBY', 0, 'PROG5100', 1724930, 'Thursday, 12:00'),
 ('PROG9000', 'Capstone Project - Front End', 0, 'PROG5000', 1654927, 'Friday, 7:00');
 
 -- --------------------------------------------------------
