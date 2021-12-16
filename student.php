@@ -1,5 +1,5 @@
 <!--Name: Christian Shingiro Student No.: 7537202 -->
-<!--Name: Mohammad Abdullah Student No.: -->
+<!--Name: Mohammad Abdullah Student No.: 8773900 -->
 <!--Name: Alexander Mykitschak Student No.: 6245344 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +18,7 @@
             $student_id = $_POST['student_id'];
             $student_fname = $_POST['student_fname'];
             $student_lname = $_POST['student_lname'];
-            $program_id = $_POST['program_id'];            
+            $program_id = $_POST['program_id'];
             $gpa = $_POST['student_gpa'];
 
             //User input goes into DB
@@ -37,8 +37,8 @@
                 $row = mysqli_fetch_assoc($r);
                 $program_gpa = $row['AVG(gpa)'];
                 echo "<br><br>$program_gpa<br><br>";
-            
-                
+
+
             //Check gpa input against program GPA average
             if ($gpa > $program_gpa) {
                 $result = "higher than the program average of $program_gpa. You're leading the pack! Keep it up.";
@@ -54,7 +54,7 @@
                     <p>Your gpa for $program_id is $gpa: This result is $result.</p>
                 </details>";
 
-            $q = "SELECT CONCAT(faculty.last_name, ', ', LEFT(faculty.first_name, 1), '.') AS 'Instructor Name', course_id AS 'Course ID', 
+            $q = "SELECT CONCAT(faculty.last_name, ', ', LEFT(faculty.first_name, 1), '.') AS 'Instructor Name', course_id AS 'Course ID',
             course_name AS 'Course Name', campus.campus_name AS 'Campus', courses.program_id AS 'Program ID', programs.program_name AS 'Program Name', session_time AS 'Time Slot'
             FROM (((courses
             INNER JOIN campus ON courses.campus_id = campus.campus_id)
@@ -62,7 +62,7 @@
             INNER JOIN faculty ON courses.faculty_id = faculty.faculty_id)
             WHERE courses.program_id = '$program_id';";
             $r = @mysqli_query($dbc, $q);
-            
+
             //Output Student timetable
             if ($r) {
                 echo '<table width="80%">
@@ -80,9 +80,9 @@
                     	<tbody>
                     ';
                 while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
-                    echo '<tr><td align="left">' . $row['Instructor Name'] . '</td><td align="left">' . $row['Course ID'] . 
-                    '</td><td align="left">' . $row['Course Name'] . '</td><td align="left">' . $row['Campus'] . 
-                    '</td><td align="left">' . $row['Program ID'] . '</td><td align="left">' . $row['Program Name'] . 
+                    echo '<tr><td align="left">' . $row['Instructor Name'] . '</td><td align="left">' . $row['Course ID'] .
+                    '</td><td align="left">' . $row['Course Name'] . '</td><td align="left">' . $row['Campus'] .
+                    '</td><td align="left">' . $row['Program ID'] . '</td><td align="left">' . $row['Program Name'] .
                     '</td><td align="left">' . $row['Time Slot'] . '</td></tr>
                     ';
                 }
@@ -92,7 +92,7 @@
 
             } else {
                 echo '<p>' . mysqli_error($dbc) . '<br><br>Query: ' . $q . '</p>';
-            }     
+            }
 
         ?>
     </body>
