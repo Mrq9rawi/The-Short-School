@@ -1,6 +1,6 @@
 <!--Name: Christian Shingiro Student No.: 7537202 -->
 <!--Name: Mohammad Abdullah Student No.: -->
-<!--Name: Alexander Mykitschak Student No.: -->
+<!--Name: Alexander Mykitschak Student No.: 6245344 -->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -20,8 +20,6 @@
             $student_lname = $_POST['student_lname'];
             $program_id = $_POST['program_id'];            
             $gpa = $_POST['student_gpa'];
-           
-            //Should also make an "is student id unique?" check here
 
             //User input goes into DB
             $q = "INSERT INTO students (student_id, first_name, last_name, program_id, gpa) VALUES ('$student_id', '$student_fname', '$student_lname', '$program_id', '$gpa')";
@@ -62,10 +60,10 @@
             INNER JOIN campus ON courses.campus_id = campus.campus_id)
             INNER JOIN programs ON courses.program_id = programs.program_id)
             INNER JOIN faculty ON courses.faculty_id = faculty.faculty_id)
-            WHERE courses.program_id = 'PROG5000';";
+            WHERE courses.program_id = '$program_id';";
             $r = @mysqli_query($dbc, $q);
-            // print_r($r);
-
+            
+            //Output Student timetable
             if ($r) {
                 echo '<table width="80%">
 	                    <thead>
@@ -92,15 +90,9 @@
                 echo '</tbody></table>';
                 mysqli_free_result ($r);
 
-
-
-
             } else {
                 echo '<p>' . mysqli_error($dbc) . '<br><br>Query: ' . $q . '</p>';
-            }
-
-
-            
+            }     
 
         ?>
     </body>

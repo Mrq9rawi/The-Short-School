@@ -1,6 +1,6 @@
 <!--Name: Christian Shingiro Student No.: 7537202 -->
 <!--Name: Mohammad Abdullah Student No.: -->
-<!--Name: Alexander Mykitschak Student No.: -->
+<!--Name: Alexander Mykitschak Student No.: 6245344 -->
 <?php
 // set the database access info as constants
 define('DB_USER', 'admin');

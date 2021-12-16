@@ -1,6 +1,6 @@
 /* Name: Christian Shingiro Student No.: 7537202 */
 /* Name: Mohammad Abdullah Student No.: */
-/* Name: Alexander Mykitschak Student No.: */
+/* Name: Alexander Mykitschak Student No.: 6245344 */
 
 
 * {
@@ -54,8 +54,7 @@ body {
 	margin-top: 50px;
 }
 
-#studentButton,
-#teacherButton {
+#studentButton {
 	border: none;
 	background-color: #fb8500;
 	padding: 20px;
@@ -67,9 +66,7 @@ body {
 	font-weight: 500;
 }
 
-#studentButton:hover,
-#teacherButton:hover {
-	background-color: #ffb703;
+#studentButton:hover {	background-color: #ffb703;
 }
 
 .forms {
@@ -87,13 +84,6 @@ body {
 	margin-top: 30px;
 }
 
-/* .forms #studentForm {
-	display: none;
-}
-
-.forms #teacherForm {
-	display: none;
-} */
 
 .forms form input:not([type="submit"]) {
 	width: 275px;
