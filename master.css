@@ -66,7 +66,8 @@ body {
 	font-weight: 500;
 }
 
-#studentButton:hover {	background-color: #ffb703;
+#studentButton:hover {
+	background-color: #ffb703;
 }
 
 .forms {
@@ -116,4 +117,28 @@ body {
 p {
 	font-size: 12px;
 	font-style: italic;
+}
+
+table {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+}
+
+table,
+th {
+	padding: 20px;
+}
+
+table,
+th,
+td {
+	border: 2px solid #023047;
+	color: white;
+	background-color: #fb8500;
+}
+
+td {
+	padding: 5px 10px;
+
 }
