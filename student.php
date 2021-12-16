@@ -15,7 +15,6 @@
     <body>
         <?php
             require "database.php";
-            require "formtodatabase.php";
             $student_id = $_POST['student_id'];
             $student_fname = $_POST['student_fname'];
             $student_lname = $_POST['student_lname'];
